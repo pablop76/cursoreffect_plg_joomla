@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade">
+    <name>Cursoreffect</name>
+    <author>pablop76</author>
+    <version>1.0.0</version>
+    <description>Wtyczka dodaje efekt animacji podążającej za kursorem myszy. Artybuty dobierz na stronie http://profilki.pl/dodatki/efekt-kursora</description>
+    <files>
+        <filename plugin="cursoreffect">cursoreffect.php</filename>
+        <folder>js</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field 
+                name="script_path" 
+                type="text" 
+                label="Ścieżka do pliku JavaScript" 
+                description="Podaj ścieżkę do pliku JavaScript, który chcesz załadować." 
+                hint="Zostaw puste. Plik cursoreffect.js jest ładowany podczas instalacji wtyczki." />
+                <field name="async" type="radio" default="0" label="Async" description="Czy ustawić atrybut async?" >
+                    <option value="1">Tak</option>
+                    <option value="0">Nie</option>
+                </field>
+                <field name="defer" type="radio" default="0" label="Defer" description="Czy ustawić atrybut defer?" >
+                    <option value="1">Tak</option>
+                    <option value="0">Nie</option>
+                </field>
+                <field 
+                name="custom_attributes" 
+                type="textarea" 
+                label="Dodatkowe atrybuty" 
+                description="Wprowadź atrybuty w formacie klucz=wartość, jeden wiersz dla każdego atrybutu." 
+                hint="Wypisz własciwości jena pod drugą w formacie klucz=wartość
+                data-scatter=1 
+                data-initscatter=3 
+                data-elemsize=2 
+                data-countelems=25 
+                data-fallingspeed=10 
+                data-lifespan=1 
+                data-initopac=0.5 
+                data-shapetype=normal 
+                data-rotation=0 
+                data-startrotated=0 
+                data-colortype=single 
+                data-glow=0 
+                data-glitter=0 
+                data-shapenormal=circle 
+                data-color=rgb(255, 51, 99) " />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
